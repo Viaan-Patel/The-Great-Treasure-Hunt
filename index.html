@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Session 16</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<style>
+body{
+    background-image: url(https://sureseniorlifestyle.com/wp-content/uploads/2025/06/Best-Treasure-Hunt-Clues-.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+</style>
+
+
+</head>
+<body class="d-flex justify-content align-items-center">
+<div class="container d-flex justify-content align-items-center flex-column">
+<h1 class="my-3">The Great Treasure Hunt!</h1>
+<div class="row g-3 justify-content-center">
+
+<div class="col-md-4">
+<div class="card p-3 text-center rounded-2">
+<h4>Guess the Gate Number</h4>
+<input type="number" placeholder="Enter Key Number" id="input12" class="form-control mb-3">
+<button class="btn btn-primary" onclick="checkKey(12)">Check key</button>
+<p id="result12" class="my-2 fw-bold"></p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-3 text-center rounded-2">
+<h4>Guess the Gate Number</h4>
+<input type="number" placeholder="Enter Key Number" id="input2" class="form-control mb-3">
+<button class="btn btn-primary" onclick="checkKey(2)">Check key</button>
+<p id="result2" class="my-2 fw-bold"></p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-3 text-center rounded-2">
+<h4>Guess the Gate Number</h4>
+<input type="number" placeholder="Enter Key Number" id="input3" class="form-control mb-3">
+<button class="btn btn-primary" onclick="checkKey(3)">Check key</button>
+<p id="result3" class="my-2 fw-bold"></p>
+</div>
+</div>
+
+
+</div>
+</div>
+
+<script>
+function checkKey(gateNumber){
+let input = document.getElementById("input" + gateNumber).value;
+let result = document.getElementById("result" + gateNumber);
+
+if(parseInt(input)===gateNumber){
+result.style.color = "green";
+result.innerHTML = "Success, you opened the gate";
+}
+
+else{
+result.style.color = "red";
+result.innerHTML = "Oops, the key does not fit this gate";
+}
+
+}
+
+
+</script>
+</body>
+</html>
